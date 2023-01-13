@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class CdRequest {\n  constructor(name, author, genreId) {\n    this.name = name;\n    this.author = author;\n    this.genreId = genreId;\n  }\n}","map":null,"metadata":{},"sourceType":"module","externalDependencies":[]}

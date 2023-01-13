@@ -1,0 +1,35 @@
+<div class="container">
+  <form [formGroup]="cdForm" (ngSubmit)="submit()">
+    <label for="author">Autor: </label>
+    <input formControlName="author" id="author" type="text">
+    <br><br>
+
+    <label for="name">Nazov: </label>
+    <input formControlName="name" id="name" type="text">
+    <br><br>
+
+    <label for="genreId">Zaner: </label>
+    <select (click)="getGenres()" formControlName="genreId" id="genreId">
+      <option *ngFor="let g of genres" value="{{g.id}}">{{g.name}}</option>
+    </select>
+    <br><br>
+    <button type="submit">Pridaj</button>
+  </form>
+
+  <br>
+
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Autor</th>
+      <th>Nazov</th>
+      <th>Zaner</th>
+    </tr>
+    <tr *ngFor="let c of cds">
+      <td>{{c.id}}</td>
+      <td>{{c.author}}</td>
+      <td>{{c.name}}</td>
+      <td>{{c.genreName}}</td>
+    </tr>
+  </table>
+</div>

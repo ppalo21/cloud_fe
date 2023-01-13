@@ -1,0 +1,21 @@
+<div class="container">
+  <form [formGroup]="genreForm" (ngSubmit)="submit()">
+    <label for="name">Nazov zanru: </label>
+    <input formControlName="name" id="name" type="text">
+    <br><br>
+    <button type="submit">Pridaj</button>
+  </form>
+
+  <br>
+
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Nazov</th>
+    </tr>
+    <tr *ngFor="let g of genres">
+      <td>{{g.id}}</td>
+      <td>{{g.name}}</td>
+    </tr>
+  </table>
+</div>
